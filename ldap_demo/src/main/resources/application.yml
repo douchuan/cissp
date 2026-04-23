@@ -1,0 +1,21 @@
+spring:
+  ldap:
+    urls: ldap://localhost:389
+    base: dc=example,dc=com
+    username: cn=admin,dc=example,dc=com
+    password: admin
+  security:
+    ldap:
+      user-search-base: ou=users
+      user-search-filter: (uid={0})
+      group-search-base: ou=groups
+      group-search-filter: (member={0})
+      group-role-attribute: cn
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.ldap: DEBUG

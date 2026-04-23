@@ -1,0 +1,56 @@
+# Create OU for users
+dn: ou=users,dc=example,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: users
+
+# Create OU for groups
+dn: ou=groups,dc=example,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: groups
+
+# User: zhangsan
+dn: uid=zhangsan,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+objectClass: top
+uid: zhangsan
+cn: zhangsan
+sn: Zhang
+userPassword: password123
+mail: zhangsan@example.com
+
+# User: lisi
+dn: uid=lisi,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+objectClass: top
+uid: lisi
+cn: lisi
+sn: Li
+userPassword: password123
+mail: lisi@example.com
+
+# User: wangwu
+dn: uid=wangwu,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+objectClass: top
+uid: wangwu
+cn: wangwu
+sn: Wang
+userPassword: password123
+mail: wangwu@example.com
+
+# Group: admin (member: zhangsan)
+dn: cn=admin,ou=groups,dc=example,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: admin
+member: uid=zhangsan,ou=users,dc=example,dc=com
+
+# Group: dev (member: lisi, wangwu)
+dn: cn=dev,ou=groups,dc=example,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: dev
+member: uid=lisi,ou=users,dc=example,dc=com
+member: uid=wangwu,ou=users,dc=example,dc=com
