@@ -15,7 +15,7 @@ OSG: Official Study Guide
 
 CISSP-CAT: 计算机化自适应考试
 
-## 第1章 实现安全治理的原则和策略
+# 第1章 实现安全治理的原则和策略
 
 CIA: Confidentiality, Integrity, Availability
 
@@ -90,7 +90,7 @@ VAST: Visual, Agile, and Simple Threat
 
 SCRM: 供应链风险管理
 
-## 第2章 人员安全和风险管理的概念
+# 第2章 人员安全和风险管理的概念
 
 job responsibilities: 岗位职责
 
@@ -137,6 +137,7 @@ IDS: Intrusion Detection System, 入侵检测系统
 DRP: 灾难恢复计划
 
 SCA: security controls assessment, 安全控制评估
+> 通常，联邦机构基于 NIST SP 800-53 Rev 5 "信息系统和组织的安全和隐私控制" 实施 SCA 流程。然而，虽然 SCA 被定义为一个**政府流程**，但对于每个致力于维持成功的安全成果的组织来说，评估安全控制的可靠性和有效性的概念都应该被采纳。
 
 RMM: risk maturity model, 风险成熟度模型
 
@@ -214,5 +215,193 @@ CBT: 基于计算机的培训
 
 ROSI: 安全投资回报
 
+NIST: 美国国家标准与技术研究院
+
+# 第3章 业务连续性计划
+
+BCP: business continuity plan, 业务连续性计划
+
+DRP: disaster recovery plan, 灾难恢复计划
+
+BIA: business impact analysis, 业务影响分析
+
+MTD: maximum tolerable downtime, 最大允许中断时间
+
+MTO: maximum tolerable outage, 最大容忍中断时间
+
+MTD 两者等价 MTO
+
+RTO: recovery time objective, 恢复时间目标
+
+RPO: recovery point objective, 恢复点目标
+
+SOC: service organization control, 服务组织控制
+
+> 第三方审计公司可按 SOC 报告的形式提供评估结果, 参见 第 15 章 ”第三方审计“
+
+USGS：美国地质勘探局
+
+FEMA: 美国联邦应急管理署
+
+Flood Factor：洪水因子
+
+COOP：连续运营计划
+
+# 第4章 法律、法规和合规
+
+CFR: Code of Federal Regulations, 美国联邦法规
+
+GDPR: General Data Protection Regulation, 通用数据保护条例
+
+CFAA: 计算机欺诈和滥用法案
+
+FISMA: 联邦信息安全管理管理法案
+
+NIST: 美国国家标准与技术研究院
+
+NIST SP 800-53: 联邦信息系统和组织的安全和隐私控制
+
+NIST SP 800-171: 保护非联邦信息系统和组织中的受控的非分类信息
+
+NIST CSF: 网络安全框架
+
+IP: 知识产权
+
+DMCA: 数字千年版权法
+
+ITAR: 国际武器贸易条例
+
+USML: 美国军需品清单
+
+EAR: 出口管理条例
+
+CCL: 美国商务部维护的商务控制清单
+
+ECPA: 电子通信隐私法案
+
+CALEA: 通信执法协助案
+
+HIPAA: 《健康保险流通与责任法案》
+
+HMO: 医疗保险和健康维护组织
+
+HITECH: 健康信息技术促进经济和临床健康法案
+
+BAA: 商业伙伴协议
+
+COPPA: 《儿童在线隐私保护法》
+
+GLBA: Gramm-Leach-Bliley 法案
+
+DPD: Data Protection Directive, 欧盟数据保护指令
+
+PIPEDA: 个人信息保护和电子文件法, 加拿大隐私法
+
+CCPA: 加州消费者隐私法案
+
+PCI DSS: 付卡行业数据安全标准
+
+# 第 5 章 保护资产安全
+
+PHI: protected health information, 受保护的健康信息
+
+FOIA: 信息自由法
+
+FOUO: for official use only, 仅用于官方用途
+
+SBU: sensitive but unclassified, 敏感但未分类
+
+ITRC: 身份盗取中心，定期跟踪数据泄露事件
+
+HVAC: heating, ventilation, and air conditioning, 供暖、通风和空调系统系统
+
+数据销毁方法:
+- erasing
+- clearing
+- purging
+- degaussing
+- destruction
+
+declassification: 解除分类
+
+DRM: digital rights management, 数字版权管理
+
+CASB: cloud access security broker, 云访问安全代理
+
+DH: 部门主管
+
+AUP: Acceptable Use Policy, 可接受使用策略
+
+custodian: 数据托管员
+
+# 第 6 章 密码学和对称密钥算法
+
+symmetirc cryptosystem
+
+asymmetric cryptosystem
+
+- data at rest
+- data in motion
+- data in use
+
+Kerchhoffs's principle: 只要密钥，那么即便有关密码系统的一切都是公开的，密码系统仍然是安全的。
+
+nonce
+
+zero-knowledge proof
+
+split knowledge
+
+key escrow: 密钥托管
+
+work funciton: 代价函数
+
+transposition cipher 移位密码
+
+columnar transposition 列移位
+
+substituion cipher 替换密码
+
+Caesar cipher 凯撒密码
+
+frequency analysis 频率分析
+
+one-time pad 单次密本，也叫 Vernam 密码
+
+running key cipher, 运动密钥密码，也叫 book cipher
+
+block cipher
+
+stream cipher
+
+confussion,diffusion: 密码算法2种基本运算
+
+密码运行模式
+- ECB: electronic codebook, 电子密码本
+- CBC: cipher block chaining, 密码块链接
+- CFB: cipher feedback, 密码反馈
+- OFB: output feedback, 输出反馈
+- CTR: counter, 计数器
+- GCM: Galois/Counter Mode, Galois/计数器模式
+- CCM: 带密码块链接消息验证码的计数器模式
+
+PGP: Pretty Good Privacy
+
+Blowfish
+
+FIPS: 联邦信息处理标注
+
+EES: FIPS 185 托管加密标准
+
+Skipjack, Clipper: 不受密码界欢迎 
+
+RSA: Rivest-Shamir-Adleman
 
 
+# 第 15 章
+
+DAST: dynamic application security testing, 动态应用安全测试
+
+# 第 16 章
+
+CAB: change advisory board, 变更咨询委员会
